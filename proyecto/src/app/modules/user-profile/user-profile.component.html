@@ -1,0 +1,22 @@
+<!-- src/app/modules/user-profile/user-profile.component.html -->
+<div class="flex items-center justify-center h-screen bg-gray-100">
+  <div class="bg-white shadow-lg rounded-lg p-6 w-96 transition-transform transform hover:scale-105 hover:shadow-xl duration-300 ease-in-out">
+    <h1 class="text-2xl font-bold mb-6">Perfil del Usuario</h1>
+    <div class="flex items-center mb-4">
+      <img [src]="user?.image" alt="{{ user?.username }}" class="w-24 h-24 rounded-full border-2 border-gray-300 mr-4">
+      <div class="overflow-hidden">
+        <p class="text-lg font-semibold">Nombre: {{ user?.firstName }} {{ user?.lastName }}</p>
+        <p class="text-lg">Usuario: {{ user?.username }}</p>
+        <p class="text-lg">Email: {{ user?.email }}</p>
+        <p class="text-lg">Género: {{ user?.gender }}</p>
+        <p class="text-lg">Token: <span class="truncate">{{ user?.accessToken }}</span></p>
+      </div>
+    </div>
+    <div class="mt-4">
+      <h2 class="text-xl font-bold">Información del Auto</h2>
+      <p class="text-lg">Modelo: Tesla</p>
+      <p class="text-lg">Año: 2022</p>
+      <img src="assets/images/tesla.webp" alt="Tesla" class="w-full h-32 object-cover rounded-md mt-2">
+    </div>
+  </div>
+</div>
