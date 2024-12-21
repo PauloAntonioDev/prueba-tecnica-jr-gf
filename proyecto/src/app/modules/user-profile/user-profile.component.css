@@ -1,0 +1,7 @@
+.truncate {
+    display: inline-block;
+    max-width: 100%; /* Ajusta el ancho máximo */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden; /* Oculta el desbordamiento */
+    text-overflow: ellipsis; /* Muestra "..." al final si el texto es demasiado largo */
+  }

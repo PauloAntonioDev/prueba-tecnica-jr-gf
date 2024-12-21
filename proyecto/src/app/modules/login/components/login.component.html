@@ -1,0 +1,18 @@
+<!-- src/app/modules/login/components/login.component.html -->
+<div class="flex items-center justify-center h-screen bg-gray-100">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="bg-white p-8 rounded-lg shadow-md w-96">
+      <div class="text-center mb-6">
+        <img src="assets/images/gf-rent-logo.png" alt="GF Rent Logo" class="w-32 mx-auto mb-4">
+      </div>
+      <div class="mb-4">
+        <label for="username" class="block text-sm font-medium text-gray-700">Nombre de Usuario</label>
+        <input id="username" formControlName="username" class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+      </div>
+      <div class="mb-4">
+        <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label>
+        <input id="password" type="password" formControlName="password" class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+      </div>
+      <button type="submit" class="w-full bg-red-600 text-white p-2 rounded hover:bg-red-700 transition duration-200">Iniciar Sesión</button>
+      <div *ngIf="errorMessage" class="text-red-500 mt-2 text-center">{{ errorMessage }}</div> <!-- Mensaje de error -->
+    </form>
+  </div>
